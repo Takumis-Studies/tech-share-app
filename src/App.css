@@ -1,0 +1,145 @@
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f6fa;
+  color: #222;
+  font-family: sans-serif;
+}
+
+main {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+h1 {
+  color: #2563eb;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 25px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+article {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+
+.preview {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  min-height: 100px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.preview h1 {
+  text-align: left;
+  color: #222;
+}
+
+.preview p {
+  line-height: 1.8;
+}
+
+
+/* 記事一覧のカード */
+
+article {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 0;
+  margin: 20px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.article-card-link {
+  display: block;
+  padding: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-card-link:hover {
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+/* 記事の題名 */
+article h2 {
+  margin-top: 0;
+}
+
+article h2 a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+article h2 a:hover {
+  text-decoration: underline;
+}
+
+/* 記事の本文 */
+article p {
+  line-height: 1.8;
+}
+
+
+.article-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-card-link:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.article-card-link h2 {
+  color: #2563eb;
+}

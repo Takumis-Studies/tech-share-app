@@ -1,0 +1,53 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "JavaScriptの基本",
+      "body": "# JavaScript入門について！！\n\nJavaScriptでは変数や関数を使います！",
+      "authorId": "user1",
+      "createdAt": "2026-11-09",
+      "updatedAt": "2026-11-09T18:15:24.041Z"
+    },
+    {
+      "title": "完全個室",
+      "body": "つまり完全な個室があるということ",
+      "authorId": "user1",
+      "createdAt": "2026-11-09T16:36:23.796Z",
+      "updatedAt": "2026-11-09T16:36:23.796Z",
+      "id": "-cHhXi3sii4"
+    },
+    {
+      "title": "モンスター",
+      "body": "これ飲んだとこでそんなに目覚めることができないこれが思い込みの力というものなのかもしれない。",
+      "authorId": "user1",
+      "createdAt": "2026-11-09T16:37:13.419Z",
+      "updatedAt": "2026-11-09T16:37:13.419Z",
+      "id": "0cCvNmwnllc"
+    },
+    {
+      "title": "CK3について",
+      "body": "CK3はいいぞぉ\nあれは沼のようなゲームだ。みんなするべきだ。",
+      "authorId": "user1",
+      "createdAt": "2026-11-09T16:41:43.808Z",
+      "updatedAt": "2026-11-09T16:41:43.808Z",
+      "id": "gSD0LiWzjGo"
+    },
+    {
+      "title": "civielization revolutionについて",
+      "body": "あれはただの沼だぞ終わりや。。。\n",
+      "authorId": "user1",
+      "createdAt": "2026-11-09T18:32:23.511Z",
+      "updatedAt": "2026-11-09T18:32:23.511Z",
+      "id": "beoGDQT6R_k"
+    },
+    {
+      "title": "こここここここあかかか",
+      "body": "ここあああああああああああのみたいいいいいいいいいいいいいいい",
+      "authorId": "user1",
+      "createdAt": "2026-11-09T18:39:12.980Z",
+      "updatedAt": "2026-11-09T18:39:12.980Z",
+      "id": "c2Jy5bznbss"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
