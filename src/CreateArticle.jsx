@@ -1,6 +1,6 @@
 
-import { useState } from 'react'
-import { Navigate, Link, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Navigate, Link, useNavigate, useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import { useAuth } from './contexts/AuthContext'
 const API_URL = import.meta.env.VITE_API_URL
@@ -8,11 +8,45 @@ const API_URL = import.meta.env.VITE_API_URL
 function CreateArticle() {
   const { user } = useAuth()
   const navigate = useNavigate()
-
+  const { id } = useParams()
+  const isEditing = id !== undefined
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  async function handleSubmit() {
+  
+useEffect(() => {
+  if (!isEditing || !user) return
+
+  async function loadArticle() {
+    try {
+      const response = await fetch(`${API_URL}/articles/${id}`)
+
+      if (!response.ok) {
+        throw new Error('記事の取得に失敗しました')
+      }
+
+      const article = await response.json()
+
+      if (article.authorId !== user.id) {
+        alert('この記事を編集する権限がありません')
+        navigate('/')
+        return
+      }
+
+      setTitle(article.title)
+      setBody(article.body)
+    } catch (error) {
+      console.error(error)
+      alert('記事を読み込めませんでした')
+      navigate('/')
+    }
+  }
+
+  loadArticle()
+}, [id, isEditing, user, navigate])
+
+
+async function handleSubmit() {
     if (!title.trim() || !body.trim()) {
       alert('題名と本文を入力してください')
       return
@@ -21,23 +55,33 @@ function CreateArticle() {
     try {
       const now = new Date().toISOString()
 
-      const newArticle = {
-        title: title,
-        body: body,
-        authorId: user.id,
-        createdAt: now,
-        updatedAt: now
-      }
-
-      const response = await fetch(`${API_URL}/articles`, {
-
-          method: 'POST',
-          headers: {
+      const articleData = isEditing
+  ? {
+      title: title,
+      body: body,
+      updatedAt: now
+    }
+  : {
+      title: title,
+      body: body,
+      author: user.name,
+      authorId: user.id,
+      createdAt: now,
+      updatedAt: now
+    }
+     
+    const response = await fetch(
+        isEditing
+            ? `${API_URL}/articles/${id}`
+            : `${API_URL}/articles`,
+       {
+            method: isEditing ? 'PATCH' : 'POST',
+            headers: {
             'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(newArticle)
+            },
+            body: JSON.stringify(articleData)
         }
-      )
+    )
 
       if (!response.ok) {
         throw new Error('記事の保存に失敗しました')
@@ -56,7 +100,7 @@ function CreateArticle() {
 
   return (
     <main>
-      <h1>新しい記事を書く</h1>
+      <h1>{isEditing ? '記事の編集' : '新しい記事を書く'}</h1>
 
       <Link to="/">記事一覧に戻る</Link>
 
@@ -81,7 +125,7 @@ function CreateArticle() {
       </div>
 
       <button onClick={handleSubmit}>
-        投稿する
+        {isEditing ? '更新する' : '投稿する'}
       </button>
     </main>
   )

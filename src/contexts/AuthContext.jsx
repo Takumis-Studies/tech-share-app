@@ -1,17 +1,18 @@
 
 import { createContext, useContext, useState } from 'react'
-
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
 
-  function login() {
-    setUser({
-      id: 'user1',
-      name: 'テスト利用者'
-    })
-  }
+
+function login() {
+  setUser({
+    id: 'user1',
+    name: 'Tech Taro'
+  })
+}
+
 
   function logout() {
     setUser(null)
@@ -24,6 +25,7 @@ export function AuthProvider({ children }) {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   return useContext(AuthContext)
 }

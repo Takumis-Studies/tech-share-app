@@ -1,53 +1,23 @@
+
 {
   "articles": [
     {
       "id": "1",
-      "title": "JavaScriptの基本",
-      "body": "# JavaScript入門について！！\n\nJavaScriptでは変数や関数を使います！",
+      "title": "React Hooksの完全理解",
+      "body": "# React Hooksの基本\n\nreactでは、Hooksを使って状態や副作用を管理できます。\n\n## 見出し\n\n主なHooksを紹介します。\n\n- リスト\n- useState：状態を管理する\n- useEffect：副作用を扱う",
+      "author": "Tech Taro",
       "authorId": "user1",
-      "createdAt": "2026-11-09",
-      "updatedAt": "2026-11-09T18:15:24.041Z"
+      "createdAt": "2026-05-14T09:00:00.000Z",
+      "updatedAt": "2026-05-14T09:00:00.000Z"
     },
     {
-      "title": "完全個室",
-      "body": "つまり完全な個室があるということ",
-      "authorId": "user1",
-      "createdAt": "2026-11-09T16:36:23.796Z",
-      "updatedAt": "2026-11-09T16:36:23.796Z",
-      "id": "-cHhXi3sii4"
-    },
-    {
-      "title": "モンスター",
-      "body": "これ飲んだとこでそんなに目覚めることができないこれが思い込みの力というものなのかもしれない。",
-      "authorId": "user1",
-      "createdAt": "2026-11-09T16:37:13.419Z",
-      "updatedAt": "2026-11-09T16:37:13.419Z",
-      "id": "0cCvNmwnllc"
-    },
-    {
-      "title": "CK3について",
-      "body": "CK3はいいぞぉ\nあれは沼のようなゲームだ。みんなするべきだ。",
-      "authorId": "user1",
-      "createdAt": "2026-11-09T16:41:43.808Z",
-      "updatedAt": "2026-11-09T16:41:43.808Z",
-      "id": "gSD0LiWzjGo"
-    },
-    {
-      "title": "civielization revolutionについて",
-      "body": "あれはただの沼だぞ終わりや。。。\n",
-      "authorId": "user1",
-      "createdAt": "2026-11-09T18:32:23.511Z",
-      "updatedAt": "2026-11-09T18:32:23.511Z",
-      "id": "beoGDQT6R_k"
-    },
-    {
-      "title": "こここここここあかかか",
-      "body": "ここあああああああああああのみたいいいいいいいいいいいいいいい",
-      "authorId": "user1",
-      "createdAt": "2026-11-09T18:39:12.980Z",
-      "updatedAt": "2026-11-09T18:39:12.980Z",
-      "id": "c2Jy5bznbss"
+      "id": "2",
+      "title": "Tailwind CSSで爆速コーディング",
+      "body": "# Tailwind CSSの基本\n\nTailwind CSSを使うと、さまざまな装飾を効率よく指定できます。\n\n## 特徴\n\n- 細かな見た目を調整できる\n- 部品ごとに装飾を管理しやすい",
+      "author": "Front Engineer",
+      "authorId": "user2",
+      "createdAt": "2026-05-15T09:00:00.000Z",
+      "updatedAt": "2026-05-15T09:00:00.000Z"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
