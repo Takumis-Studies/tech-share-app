@@ -43,9 +43,12 @@ TechShareは、プログラミングや技術に関する記事を投稿・閲�
 
 また、ファイルの配置や読み込み先が一致しないことで画面が表示されなくなる問題もあり、エラーを確認しながら修正しました。
 
+
 ## 公開先
 
-公開用のURLは、公開作業が完了してから記載します。
+- アプリ（Vercel）：https://tech-share-app.vercel.app/
+- 記事用API（Render）：https://tech-share-app.onrender.com
+- ソースコード（GitHub）：https://github.com/Takumis-Studies/tech-share-app
 
 ## ローカル環境での起動方法
 
@@ -80,4 +83,4 @@ npm run dev
 
 ※ 現在のログイン機能は学習用の簡易的な仕組みであり、本格的な本人認証ではありません。
 
-※ 現在の記事保存先は開発用の `json-server` です。公開環境への対応は今後行います。
+※ 記事の保存・取得には `json-server` を使用しています。公開環境では、Render上の記事用APIに接続しています。
